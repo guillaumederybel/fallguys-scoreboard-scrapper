@@ -1,7 +1,6 @@
 import cv2
 import pytesseract
 from PIL import Image
-from pytesseract import Output
 
 def qualified_title(image):
     """This function will retreive the number of
