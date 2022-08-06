@@ -1,6 +1,7 @@
 import cv2
 import pytesseract
 from PIL import Image
+from difflib import SequenceMatcher
 
 def qualified_title(image):
     """This function will retreive the number of
@@ -68,6 +69,26 @@ def players_names(image):
     
     return usernames
 
+def compare_lists(list_a, list_b):
+    """This method will compare two lists to get the percentage
+    of success of the OCR"""
+
+    if len(list_a) != len(list_b):
+        print("Couldn't compare lists.")
+    else:
+        null_values=0
+        ratios = 0
+        for counter, value in enumerate(list_a):
+            ratio = SequenceMatcher(None, value, list_b[counter]).ratio() * 100
+            if value == '' and list_b[counter] == '':
+                null_values+=1
+            else:
+                print(f'{value} => {list_b[counter]} : {ratio}%')
+                ratios += ratio
+       
+        average_ratio = ratios/(len(list_a) - null_values)
+        print(f'The average ratio is {average_ratio}.')
+
 
 correct_usernames_fgafter = ['zvDaviid', 'Georgqw', 'pera-molte', '', '', '', 'justinchefwales', '', '', '', 'GoldenFreddy247', 'dark7700142',
                      'Raffipuffi', '', 'Nemanja255', 'polllito3', 'ilijalukin', 'ah4', '', 'le_playerpotter', '', '', 'einfachmalso_oko', 'BigturnSam'
@@ -79,7 +100,7 @@ original_image = cv2.imread('images/fgafter.png')
 qualified = qualified_title(original_image)
 print(qualified)
 usernames = players_names(original_image)
+compare_lists(correct_usernames_fgafter, usernames)
 print(usernames)
-print(correct_usernames_fgafter)
 
 
