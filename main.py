@@ -70,7 +70,7 @@ def players_names(image):
     return usernames
 
 
-correct_usernames = ['zvDaviid', 'Georgqw', 'pera-molte', '', '', '', 'justinchefwales', '', '', '', 'GoldenFreddy247', 'dark7700142',
+correct_usernames_fgafter = ['zvDaviid', 'Georgqw', 'pera-molte', '', '', '', 'justinchefwales', '', '', '', 'GoldenFreddy247', 'dark7700142',
                      'Raffipuffi', '', 'Nemanja255', 'polllito3', 'ilijalukin', 'ah4', '', 'le_playerpotter', '', '', 'einfachmalso_oko', 'BigturnSam'
                      '', 'BeauN1NJ4', 'LMAO-Sebo', 'DS_2_', 'lasheee14', 'GimmeYoFood2419', 'QuackTheDuck46', 'X-olaidana-X', '', 'Renzy_the_Psycho', '', 'Missydante',
                      'pavlelatin04', 'KhalVissi', '', 'Malek452', '', 'Nolansr02', 'piotrghost', 'FLASH Gordon070', 'Schnee_Krleger', 'Gnercad', 'SAMUNK', 'Black2_Car3',
@@ -81,6 +81,6 @@ qualified = qualified_title(original_image)
 print(qualified)
 usernames = players_names(original_image)
 print(usernames)
-print(correct_usernames)
+print(correct_usernames_fgafter)
 
 
