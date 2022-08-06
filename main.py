@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import cv2
 import pytesseract
 from PIL import Image
