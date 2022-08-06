@@ -62,8 +62,8 @@ def players_names(image):
             username_pic = Image.fromarray(black_and_white_player)
             username = pytesseract.image_to_string(username_pic)
             usernames.append(username.replace('\n',''))
-            player_left_left += 93
-            player_left_right += 93
+            player_left_left += 94
+            player_left_right += 94
         player_top_top += 104 # between 103 and 104
         player_top_bot += 104 # between 103 and 104
     
@@ -79,7 +79,7 @@ def compare_lists(list_a, list_b):
         null_values=0
         ratios = 0
         for counter, value in enumerate(list_a):
-            ratio = SequenceMatcher(None, value, list_b[counter]).ratio() * 100
+            ratio = SequenceMatcher(None, value, list_b[counter],).ratio() * 100
             if value == '' and list_b[counter] == '':
                 null_values+=1
             else:
@@ -87,11 +87,11 @@ def compare_lists(list_a, list_b):
                 ratios += ratio
        
         average_ratio = ratios/(len(list_a) - null_values)
-        print(f'The average ratio is {average_ratio}.')
+        print(f'\nThe average ratio is {average_ratio}.')
 
 
 correct_usernames_fgafter = ['zvDaviid', 'Georgqw', 'pera-molte', '', '', '', 'justinchefwales', '', '', '', 'GoldenFreddy247', 'dark7700142',
-                     'Raffipuffi', '', 'Nemanja255', 'polllito3', 'ilijalukin', 'ah4', '', 'le_playerpotter', '', '', 'einfachmalso_oko', 'BigturnSam'
+                     'Raffipuffi', '', 'Nemanja255', 'polllito3', 'ilijalukin', 'ah4', '', 'le_playerpotter', '', '', 'einfachmalso_oko', 'BigturnSam',
                      '', 'BeauN1NJ4', 'LMAO-Sebo', 'DS_2_', 'lasheee14', 'GimmeYoFood2419', 'QuackTheDuck46', 'X-olaidana-X', '', 'Renzy_the_Psycho', '', 'Missydante',
                      'pavlelatin04', 'KhalVissi', '', 'Malek452', '', 'Nolansr02', 'piotrghost', 'FLASH Gordon070', 'Schnee_Krleger', 'Gnercad', 'SAMUNK', 'Black2_Car3',
                      'Firefist_AJ97', '', 'Senthu26', 'INQUIZIT', 'Roque-_-09', 'cours-rares', '', '', 'TSM_NAJJARF', 'M4jszakk_19', 'Ghosht_16', 'JackRapid5270']
@@ -101,6 +101,5 @@ qualified = qualified_title(original_image)
 print(qualified)
 usernames = players_names(original_image)
 compare_lists(correct_usernames_fgafter, usernames)
-print(usernames)
 
 
