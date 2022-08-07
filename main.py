@@ -110,10 +110,10 @@ def players_names_1440(image):
         for y in range(board_columns):
             cropped_player = image[player_top_top:player_top_bot, player_left_left:player_left_right]
             gray_player = cv2.cvtColor(cropped_player, cv2.COLOR_BGR2GRAY)
-            (thresh, black_and_white_player) = cv2.threshold(gray_player, 231, 190, cv2.THRESH_BINARY) # around 232, 233
-            cv2.imshow('Player', black_and_white_player)
-            cv2.waitKey(0)
-            cv2.destroyAllWindows()
+            (thresh, black_and_white_player) = cv2.threshold(gray_player, 234, 190, cv2.THRESH_BINARY) # around 232, 233
+            # cv2.imshow('Player', black_and_white_player)
+            # cv2.waitKey(0)
+            # cv2.destroyAllWindows()
             username_pic = Image.fromarray(black_and_white_player)
             username = pytesseract.image_to_string(username_pic)
             usernames.append(username.replace('\n',''))
