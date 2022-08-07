@@ -1,0 +1,30 @@
+fgafter (black and white (thresh : 230, max_value : 200)): 70.07309166445914
+fgafter (black and white (thresh : 231, max_value : 200)): 72.22098970231069
+fgafter (black and white (thresh : 232, max_value : 200)): 69.68395398902614
+fgafter (black and white (thresh : 233, max_value : 200)): 72.71423071870895
+fgafter (black and white (thresh : 234, max_value : 200)): 72.79016499700911
+fgafter (black and white (thresh : 235, max_value : 200)): 66.07633434509658
+
+fgafter (gray): 56.18407359739228
+
+fgafter (black and white (thresh : 234, max_value : 255)): 72.38667874624802
+fgafter (black and white (thresh : 234, max_value : 220)): 70.89539605999421
+fgafter (black and white (thresh : 234, max_value : 180)): 71.35835838853802
+fgafter (black and white (thresh : 234, max_value : 185)): 71.81000508291748
+fgafter (black and white (thresh : 234, max_value : 189)): 72.57071077974068
+fgafter (black and white (thresh : 234, max_value : 190)): 73.08375023120675
+fgafter (black and white (thresh : 234, max_value : 191)): 72.58908677525244
+fgafter (black and white (thresh : 234, max_value : 195)): 72.21879241953431
+
+fgafter (black and white (thresh : 233, max_value : 189)): 73.40135176344145
+fgafter (black and white (thresh : 233, max_value : 190)): 73.62293475226862
+fgafter (black and white (thresh : 233, max_value : 191)): 72.79384771400345
+
+fgafter (black and white (thresh : 232, max_value : 189)): 70.43226824665715
+fgafter (black and white (thresh : 232, max_value : 190)): 70.00524665129116
+fgafter (black and white (thresh : 232, max_value : 191)): 70.30441473371047
+
+fg2k (black and white (thresh : 231, max_value : 190)): 72.28151461581987
+fg2k (black and white (thresh : 233, max_value : 190)): 69.3428970695746
+fg2k (black and white (thresh : 232, max_value : 189)): 68.90869655174207
+fg2k (black and white (thresh : 234, max_value : 190)): 67.63382089140005
