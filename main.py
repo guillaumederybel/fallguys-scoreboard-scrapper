@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+"""This module will retreive usernames from a fallguys scoreboard image.
+It will use the OCR Tesseract and OpenCV to modify the images"""
 
 import cv2
 import pytesseract
@@ -68,7 +70,7 @@ def players_names(image):
             player_left_right += 94
         player_top_top += 104 # between 103 and 104
         player_top_bot += 104 # between 103 and 104
-    
+
     return usernames
 
 def compare_lists(list_a, list_b):
@@ -87,7 +89,7 @@ def compare_lists(list_a, list_b):
             else:
                 print(f'{value} => {list_b[counter]} : {ratio}%')
                 ratios += ratio
-       
+
         average_ratio = ratios/(len(list_a) - null_values)
         print(f'\nThe average ratio is {average_ratio}.')
 
@@ -103,5 +105,3 @@ qualified = qualified_title(original_image)
 print(qualified)
 usernames = players_names(original_image)
 compare_lists(correct_usernames_fgafter, usernames)
-
-
